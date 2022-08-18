@@ -15,7 +15,7 @@ export class Inter {
   }
 
   public inferTypeExports(): string[] {
-    const program = createProgram({rootNames: this.options.includes, options: this.compilerOptions});
+    const program = createProgram({rootNames: this.options.include, options: this.compilerOptions});
 
     const checker = program.getTypeChecker();
 

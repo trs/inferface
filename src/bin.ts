@@ -10,7 +10,7 @@ program
   .option(
     '--project <path>',
     'The path to the typescript configuration file, or to a folder with a \'tsconfig.json\'.',
-    `${__dirname}`
+    process.cwd()
   );
 
 program.parse();
@@ -21,14 +21,10 @@ const projectPath = resolve(project);
 
 const tsconfigPath = statSync(projectPath).isFile()
   ? projectPath
-  : join(projectPath, 'tsconfig.json')
-
-console.log('tsconfigPath', tsconfigPath);
+  : join(projectPath, 'tsconfig.json');
 
 const options = JSON.parse(readFileSync(tsconfigPath, {encoding: 'utf-8'}));
 
 const inter = new Inter(options);
-
 const types = inter.inferTypeExports();
-
 inter.emitTypeExports(types);

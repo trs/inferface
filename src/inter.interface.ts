@@ -1,7 +1,7 @@
 import { CompilerOptions } from "typescript";
 
 export interface InterOptions {
-  includes: string[];
+  include: string[];
   outFile: string;
 }
 
