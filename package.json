@@ -1,7 +1,7 @@
 {
-  "name": "inter",
   "scripts": {
-    "build": "yarn workspace ts-inter build"
+    "build": "yarn workspace ts-inter build",
+    "publish": "yarn workspace ts-inter npm publish"
   },
   "workspaces": [
     "examples/*",

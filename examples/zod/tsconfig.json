@@ -12,7 +12,8 @@
     "target": "ES2021"
   },
   "ts-inter": {
-    "include": ["./src/api.dto.ts"],
-    "outFile": "./src/api.out.d.ts"
+    "include": ["./src/*.dto.ts"],
+    "outFile": "./out/file/out.d.ts",
+    "outDir": "./out/dir"
   }
 }

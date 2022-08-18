@@ -1,6 +1,5 @@
 {
   "name": "example-zod",
-  "packageManager": "yarn@3.2.2",
   "dependencies": {
     "zod": "^3.18.0"
   },
@@ -8,6 +7,6 @@
     "ts-inter": "workspace:*"
   },
   "scripts": {
-    "infer": "ts-inter --project tsconfig.json"
+    "build": "ts-inter --project tsconfig.json"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "ts-inter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
   "module": "dist/esm/index.d.ts",
@@ -13,7 +13,8 @@
     "typescript": "*"
   },
   "dependencies": {
-    "commander": "^9.4.0"
+    "commander": "^9.4.0",
+    "fast-glob": "^3.2.11"
   },
   "devDependencies": {
     "@types/node": "^18.7.6",
@@ -30,5 +31,9 @@
     "build:esm": "yarn prebuild:esm && tsc -p tsconfig.esm.json && tsc-alias -p tsconfig.esm.json && yarn postbuild:esm",
     "postbuild:cjs": "touch dist/cjs/package.json && echo '{ \"type\": \"commonjs\" }' > dist/cjs/package.json",
     "postbuild:esm": "touch dist/esm/package.json && echo '{ \"type\": \"module\" }' > dist/esm/package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trs/ts-inter/tree/main/packages/ts-inter"
   }
 }
