@@ -474,6 +474,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"example-zod@workspace:examples/zod":
+  version: 0.0.0-use.local
+  resolution: "example-zod@workspace:examples/zod"
+  dependencies:
+    ts-inter: "workspace:*"
+    zod: ^3.18.0
+  languageName: unknown
+  linkType: soft
+
 "fast-glob@npm:^3.2.9":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
@@ -812,6 +821,12 @@ __metadata:
   checksum: 4a48a733847879d6cf6691860a6b1e3f0f4754176e4d71494c41f3475553768b10f84b5ce1d40fbd0e34e6bfbb864ee35858ad4dd2cf31e02fc4a154b724d7f1
   languageName: node
   linkType: hard
+
+"inter@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "inter@workspace:."
+  languageName: unknown
+  linkType: soft
 
 "internal-slot@npm:^1.0.3":
   version: 1.0.3
@@ -1819,9 +1834,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-inter@workspace:.":
+"ts-inter@workspace:*, ts-inter@workspace:packages/ts-inter":
   version: 0.0.0-use.local
-  resolution: "ts-inter@workspace:."
+  resolution: "ts-inter@workspace:packages/ts-inter"
   dependencies:
     "@types/node": ^18.7.6
     commander: ^9.4.0
@@ -1832,7 +1847,7 @@ __metadata:
   peerDependencies:
     typescript: "*"
   bin:
-    ts-inter: dist/bin.js
+    ts-inter: dist/cjs/bin.js
   languageName: unknown
   linkType: soft
 
@@ -1974,5 +1989,12 @@ __metadata:
   version: 4.0.0
   resolution: "yallist@npm:4.0.0"
   checksum: 343617202af32df2a15a3be36a5a8c0c8545208f3d3dfbc6bb7c3e3b7e8c6f8e7485432e4f3b88da3031a6e20afa7c711eded32ddfb122896ac5d914e75848d5
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.18.0":
+  version: 3.18.0
+  resolution: "zod@npm:3.18.0"
+  checksum: 86a9a9928f4b40a07020d4b9832842fa4a70050c2d7bd1b2866bc1acfd734aa53a40f87a99a4312a637341a608b0105770c7a1f83b56df78e97691b4f5badcd8
   languageName: node
   linkType: hard

@@ -1,11 +1,11 @@
 {
-  "name": "zod",
+  "name": "example-zod",
   "packageManager": "yarn@3.2.2",
   "dependencies": {
     "zod": "^3.18.0"
   },
   "devDependencies": {
-    "ts-inter": "../.."
+    "ts-inter": "workspace:*"
   },
   "scripts": {
     "infer": "ts-inter --project tsconfig.json"

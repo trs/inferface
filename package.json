@@ -1,35 +1,13 @@
 {
-  "name": "ts-inter",
-  "version": "0.0.1",
-  "main": "dist/cjs/index.js",
-  "types": "dist/cjs/index.d.ts",
-  "module": "dist/esm/index.d.ts",
-  "bin": "dist/cjs/bin.js",
-  "files": [
-    "dist"
+  "name": "inter",
+  "scripts": {
+    "build": "yarn workspace ts-inter build"
+  },
+  "workspaces": [
+    "examples/*",
+    "packages/*"
   ],
   "license": "MIT",
-  "peerDependencies": {
-    "typescript": "*"
-  },
-  "dependencies": {
-    "commander": "^9.4.0"
-  },
-  "devDependencies": {
-    "@types/node": "^18.7.6",
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
-    "tsc-alias": "^1.7.0",
-    "typescript": "^4.7.4"
-  },
-  "scripts": {
-    "build": "run-p build:cjs build:esm",
-    "prebuild:cjs": "rimraf dist/cjs",
-    "prebuild:esm": "rimraf dist/esm",
-    "build:cjs": "yarn prebuild:cjs && tsc -p tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json && yarn postbuild:cjs",
-    "build:esm": "yarn prebuild:esm && tsc -p tsconfig.esm.json && tsc-alias -p tsconfig.esm.json && yarn postbuild:esm",
-    "postbuild:cjs": "touch dist/cjs/package.json && echo '{ \"type\": \"commonjs\" }' > dist/cjs/package.json",
-    "postbuild:esm": "touch dist/esm/package.json && echo '{ \"type\": \"module\" }' > dist/esm/package.json"
-  },
+  "private": true,
   "packageManager": "yarn@3.2.2"
 }
