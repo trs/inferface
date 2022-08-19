@@ -2,16 +2,16 @@ import { createProgram, isTypeAliasDeclaration, Program, TypeChecker } from 'typ
 import { basename } from 'node:path';
 import glob from 'fast-glob';
 
-import { CompilerOptionsWithInter, InterOptions, TypeExport } from './types';
+import { InferfaceCompilerOptions, InferfaceOptions, InferfaceExport } from './types';
 
-export class TypescriptInferer {
-  public readonly options: InterOptions;
+export class Inferface {
+  public readonly options: InferfaceOptions;
 
   private readonly program: Program;
   private readonly checker: TypeChecker;
 
-  public constructor(config: CompilerOptionsWithInter) {
-    const {['ts-inter']: options, ...compilerOptions} = config;
+  public constructor(config: InferfaceCompilerOptions) {
+    const {['inferface']: options, ...compilerOptions} = config;
     this.options = options;
 
     const rootNames = glob.sync(this.options.include);
@@ -24,7 +24,7 @@ export class TypescriptInferer {
     return this.program.getRootFileNames();
   }
 
-  public inferTypeExports(file: string): TypeExport[] {
+  public inferTypeExports(file: string): InferfaceExport[] {
     const sourceFile = this.program.getSourceFile(file);
     const symbolLoc = this.checker.getSymbolAtLocation(sourceFile);
     const moduleExports = this.checker.getExportsOfModule(symbolLoc);

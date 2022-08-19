@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build": "yarn workspace ts-inter build",
-    "publish": "yarn workspace ts-inter npm publish"
+    "build": "yarn workspace inferface build",
+    "publish": "yarn workspace inferface npm publish"
   },
   "workspaces": [
     "examples/*",

@@ -478,7 +478,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "example-zod@workspace:examples/zod"
   dependencies:
-    ts-inter: "workspace:*"
+    inferface: "workspace:*"
     zod: ^3.18.0
   languageName: unknown
   linkType: soft
@@ -804,6 +804,24 @@ __metadata:
   checksum: 181e732764e4a0611576466b4b87dac338972b839920b2a8cde43642e4ed6bd54dc1fb0b40874728f2a2df9a1b097b8ff83b56d5f8f8e3927f837fdcb47d8a89
   languageName: node
   linkType: hard
+
+"inferface@workspace:*, inferface@workspace:packages/ts-inter":
+  version: 0.0.0-use.local
+  resolution: "inferface@workspace:packages/ts-inter"
+  dependencies:
+    "@types/node": ^18.7.6
+    commander: ^9.4.0
+    fast-glob: ^3.2.11
+    npm-run-all: ^4.1.5
+    rimraf: ^3.0.2
+    tsc-alias: ^1.7.0
+    typescript: ^4.7.4
+  peerDependencies:
+    typescript: "*"
+  bin:
+    inferface: dist/cjs/bin.js
+  languageName: unknown
+  linkType: soft
 
 "inflight@npm:^1.0.4":
   version: 1.0.6
@@ -1833,24 +1851,6 @@ __metadata:
   checksum: f76fa01b3d5be85db6a2a143e24df9f60dd047d151062d0ba3df62953f2f697b16fe5dad9b0ac6191c7efc7b1d9dcaa4b768174b7b29da89d4428e64bc0a20ed
   languageName: node
   linkType: hard
-
-"ts-inter@workspace:*, ts-inter@workspace:packages/ts-inter":
-  version: 0.0.0-use.local
-  resolution: "ts-inter@workspace:packages/ts-inter"
-  dependencies:
-    "@types/node": ^18.7.6
-    commander: ^9.4.0
-    fast-glob: ^3.2.11
-    npm-run-all: ^4.1.5
-    rimraf: ^3.0.2
-    tsc-alias: ^1.7.0
-    typescript: ^4.7.4
-  peerDependencies:
-    typescript: "*"
-  bin:
-    ts-inter: dist/cjs/bin.js
-  languageName: unknown
-  linkType: soft
 
 "tsc-alias@npm:^1.7.0":
   version: 1.7.0

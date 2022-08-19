@@ -1,16 +1,16 @@
 import { CompilerOptions } from "typescript";
 
-export interface InterOptions {
+export interface InferfaceOptions {
   include: string[];
   outFile?: string;
   outDir?: string;
 }
 
-export type CompilerOptionsWithInter = {
-  'ts-inter': InterOptions;
+export type InferfaceCompilerOptions = {
+  'inferface': InferfaceOptions;
 } & CompilerOptions;
 
-export interface TypeExport {
+export interface InferfaceExport {
   fileName: string;
   text: string;
 }

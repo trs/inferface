@@ -11,7 +11,7 @@
     "module": "commonjs",
     "target": "ES2021"
   },
-  "ts-inter": {
+  "inferface": {
     "include": ["./src/*.dto.ts"],
     "outFile": "./out/file/out.d.ts",
     "outDir": "./out/dir"

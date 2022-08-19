@@ -4,7 +4,7 @@ import { program } from 'commander';
 import { resolve, join } from 'node:path';
 import { statSync, readFileSync, writeFileSync } from 'node:fs';
 
-import { TypescriptInferer } from "./main";
+import { Inferface } from "./main";
 
 program
   .option(
@@ -25,7 +25,7 @@ const tsconfigPath = statSync(projectPath).isFile()
 
 const options = JSON.parse(readFileSync(tsconfigPath, {encoding: 'utf-8'}));
 
-const inferer = new TypescriptInferer(options);
+const inferer = new Inferface(options);
 const files = inferer.getInterfaceFiles();
 
 let outFileText = '';

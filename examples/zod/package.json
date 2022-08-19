@@ -4,9 +4,9 @@
     "zod": "^3.18.0"
   },
   "devDependencies": {
-    "ts-inter": "workspace:*"
+    "inferface": "workspace:*"
   },
   "scripts": {
-    "build": "ts-inter --project tsconfig.json"
+    "build": "inferface --project tsconfig.json"
   }
 }
