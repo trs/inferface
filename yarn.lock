@@ -805,9 +805,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inferface@workspace:*, inferface@workspace:packages/ts-inter":
+"inferface@workspace:*, inferface@workspace:packages/inferface":
   version: 0.0.0-use.local
-  resolution: "inferface@workspace:packages/ts-inter"
+  resolution: "inferface@workspace:packages/inferface"
   dependencies:
     "@types/node": ^18.7.6
     commander: ^9.4.0

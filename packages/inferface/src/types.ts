@@ -6,9 +6,9 @@ export interface InferfaceOptions {
   outDir?: string;
 }
 
-export type InferfaceCompilerOptions = {
-  'inferface': InferfaceOptions;
-} & CompilerOptions;
+export type InferfaceCompilerOptions =
+  & { inferface: InferfaceOptions }
+  & CompilerOptions;
 
 export interface InferfaceExport {
   fileName: string;
