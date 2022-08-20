@@ -27,8 +27,16 @@ export class Inferface {
   }
 
   public static loadProjectConfigFile(path: string): InferfaceCompilerOptions {
-    const projectPath = dirname(resolve(path));
-    const configFilePath = findConfigFile(projectPath, (file) => statSync(file).isFile());
+    const projectPath = resolve(path);
+    const [projectDir, projectFile] = statSync(projectPath).isFile()
+      ? [dirname(projectPath), basename(projectPath)]
+      : [projectPath, 'tsconfig.json'];
+
+    const configFilePath = findConfigFile(
+      projectDir,
+      (file) => statSync(file).isFile(),
+      projectFile
+      );
 
     const configFileContents = readConfigFile(configFilePath, (file) => readFileSync(file, { encoding: 'utf-8' }));
     if (configFileContents.error) throw new Error(configFileContents.error.messageText.toString());
