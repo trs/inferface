@@ -1,6 +1,6 @@
 {
   "name": "inferface",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "dist/cjs/main.js",
   "types": "dist/cjs/main.d.ts",
   "module": "dist/esm/main.d.ts",
@@ -36,5 +36,5 @@
     "url": "https://github.com/trs/inferface/tree/main/packages/inferface"
   },
   "description": "Emit the result of inferred types, useful for exposing Typescript API interfaces to consumers",
-  "license": "MIT"
+  "license": "Apache-2.0"
 }
