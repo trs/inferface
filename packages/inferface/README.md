@@ -1,5 +1,8 @@
 # `inferface`
 
+[![npm](https://img.shields.io/npm/v/inferface)](https://www.npmjs.com/package/inferface)
+[![github](https://img.shields.io/badge/github-trs/inferface-blue)](https://github.com/trs/inferface)
+
 Emit the result of inferred types, useful for exposing Typescript API interfaces to consumers.
 
 ## Why?

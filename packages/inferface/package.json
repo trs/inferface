@@ -1,14 +1,13 @@
 {
   "name": "inferface",
-  "version": "0.2.0",
-  "main": "dist/cjs/index.js",
-  "types": "dist/cjs/index.d.ts",
-  "module": "dist/esm/index.d.ts",
+  "version": "0.2.1",
+  "main": "dist/cjs/main.js",
+  "types": "dist/cjs/main.d.ts",
+  "module": "dist/esm/main.d.ts",
   "bin": "dist/cjs/bin.js",
   "files": [
     "dist"
   ],
-  "license": "MIT",
   "peerDependencies": {
     "typescript": "*"
   },
@@ -35,5 +34,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/trs/inferface/tree/main/packages/inferface"
-  }
+  },
+  "description": "Emit the result of inferred types, useful for exposing Typescript API interfaces to consumers",
+  "license": "MIT"
 }
